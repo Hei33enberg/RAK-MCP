@@ -4,7 +4,7 @@
 >
 > 🌍 Strona/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
 
-`@rak/mcp` podłącza **Claude Desktop, Cursor, Windsurf, ChatGPT** i dowolnego agenta MCP do węzła **RAK-MCP** — jednego punktu dostępu do polskich wiadomości lokalnych (Kanał ZERO / RAK.AD) i narzędzi redakcyjnych Stanowskiego. Konwencja narzędzi: `rak_<moduł>_<operacja>`.
+`@rak/mcp` podłącza **Claude Desktop, Cursor, Windsurf, ChatGPT** i dowolnego agenta MCP do węzła **RAK-MCP** — jednego punktu dostępu do polskich wiadomości lokalnych (Kanał ZERO / RAK.AD) i uniwersalnych narzędzi redakcyjnych (research + write). Konwencja narzędzi: `rak_<moduł>_<operacja>`.
 
 ---
 
@@ -67,7 +67,8 @@ npx @modelcontextprotocol/inspector
 | `content` | `search`, `get_article`, `list_section`, `wire_feed`, `voivodeship_feed` | darmowe |
 | `rag` | `find_related`, `semantic_search` | darmowe |
 | `meta` | `list_sources`, `list_skills`, `health` | anon / discovery |
-| `stanowski` | `search_web`, `extract_url`, `build_fact_pack`, `summarize_rag_topic`, `draft_article`, `edit_draft`, `export_article`, `propose_plan`, `execute_pipeline`, `schedule_publish` | free → internal |
+| `research` | `web`, `extract`, `fact_pack`, `summarize` | anon → paid |
+| `write` | `draft`, `edit`, `export`, `plan`, `pipeline`, `publish` | paid → internal |
 | `media` | `generate_image`, `generate_video`, `tts` | paid |
 | `qa` | `fact_check`, `moderate`, `uniqueness` | paid |
 | `crawl` / `distribution` | `crawl_search`, `add_source`, `subscribe`, `distribution_publish` | internal |
@@ -110,4 +111,4 @@ MIT (klient). Dostęp do treści/API wg ToS RAK.
 
 ---
 
-<sub>Tagi: polskie wiadomości lokalne · Poland news MCP · Polish local news API · dane o Polsce dla AI · model context protocol · RAG · 16 województw · Kanał ZERO · RAK.AD · Stanowski · AI agents · Claude · Cursor · Perplexity</sub>
+<sub>Tagi: polskie wiadomości lokalne · Poland news MCP · Polish local news API · dane o Polsce dla AI · model context protocol · RAG · 16 województw · Kanał ZERO · RAK.AD · AI agents · Claude · Cursor · Perplexity</sub>

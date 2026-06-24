@@ -6,10 +6,10 @@ Gdy agent buduje research pod tekst: szybki web search, agregacja faktów ze źr
 ## Narzędzia
 | Narzędzie | Po co | Tier |
 |---|---|---|
-| `rak_stanowski_search_web` | web search + cytowania | anon/free 5/dzień/IP, dalej paid |
-| `rak_stanowski_build_fact_pack` | fakty + źródła + ryzyka | paid |
-| `rak_stanowski_summarize_rag_topic` | streszczenie tematu z archiwum | paid |
-| `rak_stanowski_extract_url` | dowolny URL → czysty markdown (SSRF-safe) | paid |
+| `rak_research_web` | web search + cytowania | anon/free 5/dzień/IP, dalej paid |
+| `rak_research_fact_pack` | fakty + źródła + ryzyka | paid |
+| `rak_research_summarize` | streszczenie tematu z archiwum | paid |
+| `rak_research_extract` | dowolny URL → czysty markdown (SSRF-safe) | paid |
 | `rak_rag_find_related` | powiązane artykuły (similarity) | paid |
 | `rak_rag_semantic_search` | dense search po embeddingach | paid |
 
