@@ -1,18 +1,18 @@
-# SKILL: rak-media — generatywne media
+# SKILL: rak-media — generative media
 
-## Kiedy używać
-Gdy agent potrzebuje assetów do tekstu: ilustracja, krótkie wideo, narracja TTS. Operacje async, kosztowne.
+## When to use
+When an agent needs assets for a piece: illustration, short video, TTS narration. Async, costly operations.
 
-## Narzędzia
-| Narzędzie | Po co | Tier |
+## Tools
+| Tool | Purpose | Tier |
 |---|---|---|
-| `rak_media_generate_image` | obraz z promptu → `{jobId, pollUrl}` | paid (credits) |
-| `rak_media_generate_video` | wideo (duration 5/8/10, aspect 16:9/9:16/1:1) | paid (credits) |
-| `rak_media_tts` | narracja (TTS) | paid (credits) |
+| `rak_media_generate_image` | image from a prompt → `{jobId, pollUrl}` | paid (credits) |
+| `rak_media_generate_video` | video (duration 5/8/10, aspect 16:9/9:16/1:1) | paid (credits) |
+| `rak_media_tts` | narration (TTS) | paid (credits) |
 
-## Tier / koszt
-`paid` only. Egzekucja limitów + kredyty wg cennika RAK. Zwrot `{jobId, pollUrl}` — odpytuj o gotowy asset.
+## Tier / cost
+`paid` only. Quota + credit enforcement per RAK pricing. Returns `{jobId, pollUrl}` — poll for the finished asset.
 
-## Przykładowe prompty
-- „Wygeneruj okładkę do tego artykułu, 16:9."
-- „Zrób 8s wideo intro, pionowe 9:16."
+## Example prompts
+- "Generate a cover image for this article, 16:9."
+- "Make an 8s intro video, vertical 9:16."

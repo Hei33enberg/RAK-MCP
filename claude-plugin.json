@@ -1,11 +1,11 @@
 {
   "name": "rak-mcp",
-  "displayName": "RAK — polskie treści lokalne + AI redakcja",
+  "displayName": "RAK — Polish local content + AI editorial",
   "version": "0.0.0",
-  "description": "Instant dostęp do treści Kanału ZERO / RAK.AD (artykuły, wire, feedy per województwo, 1709 źródeł) oraz narzędzi redakcyjnych (research, pisanie, media, QA) przez MCP.",
+  "description": "Instant access to Kanał ZERO / RAK.AD content (articles, wire, per-region feeds, 1709 sources) and editorial tools (research, writing, media, QA) over MCP.",
   "homepage": "https://rak.ad",
   "categories": ["news", "content", "research", "poland", "media"],
-  "keywords": ["polska", "news", "lokalne media", "rag", "dziennikarstwo", "wojewodztwa"],
+  "keywords": ["poland", "news", "local media", "rag", "journalism", "regions"],
   "mcpServers": {
     "rak": {
       "command": "npx",

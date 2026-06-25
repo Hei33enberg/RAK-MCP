@@ -1,22 +1,22 @@
-# SKILL: rak-content — treść RAK (read)
+# SKILL: rak-content — RAK content (read)
 
-## Kiedy używać
-Gdy agent potrzebuje polskich treści lokalnych/krajowych: artykuły, wire feed, feedy per województwo, wyszukiwanie hybrydowe (FTS + semantyka). Dostęp read-only.
+## When to use
+When an agent needs Polish local/national content: articles, wire feed, per-region feeds, hybrid search (FTS + semantics). Read-only.
 
-## Narzędzia
-| Narzędzie | Po co | Tier |
+## Tools
+| Tool | Purpose | Tier |
 |---|---|---|
-| `rak_content_search` | hybryda RRF po artykułach (query, section?, alpha?, limit?) | free+ |
-| `rak_content_get_article` | pełny artykuł po slug/id | free+ |
-| `rak_content_list_section` | lista per sekcja (paginacja) | free+ |
-| `rak_content_wire_feed` | syndykowany wire (minScore, since) | free+ |
-| `rak_content_region_feed` | treść per region (PL: województwo, 16 woj./TERYT; alias `voivodeship`) | free+ |
-| `rak_meta_list_sources` | census 1709 źródeł lokalnych | anon (bez klucza) |
+| `rak_content_search` | hybrid RRF over articles (query, section?, alpha?, limit?) | free+ |
+| `rak_content_get_article` | full article by slug/id | free+ |
+| `rak_content_list_section` | list per section (pagination) | free+ |
+| `rak_content_wire_feed` | syndicated wire feed (minScore, since) | free+ |
+| `rak_content_region_feed` | content per region (PL node maps to voivodeship — 16 regions/TERYT; input alias `voivodeship`) | free+ |
+| `rak_meta_list_sources` | census of 1709 local sources | anon (no key) |
 
-## Tier / koszt
-Read = `free` z niskim limitem; `rak_meta_*` anonimowo (discovery). Brak kosztu kredytowego.
+## Tier / cost
+Read = `free` with a low rate limit; `rak_meta_*` works anonymously (discovery/AEO). No credit cost.
 
-## Przykładowe prompty
-- „Znajdź najnowsze artykuły o budżecie gminy w woj. śląskim."
-- „Pokaż wire feed z ostatnich 24h, minScore 70."
-- „Wylistuj lokalne źródła medialne z Małopolski."
+## Example prompts
+- "Find the latest articles about the municipal budget in the Silesia region."
+- "Show the wire feed from the last 24h, minScore 70."
+- "List local media sources from the Lesser Poland region."

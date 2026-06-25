@@ -7,7 +7,7 @@ startCommand:
       RAK_API_KEY:
         type: string
         title: RAK API Key
-        description: Bearer key. Pomiń dla dostępu anonimowego (metadane + web search 5/dzień/IP).
+        description: Bearer key. Omit for anonymous access (metadata + web search 5/day/IP).
       RAK_BASE_URL:
         type: string
         default: https://rak.ad

@@ -1,21 +1,21 @@
-# SKILL: rak-distribution — pozyskiwanie i dystrybucja
+# SKILL: rak-distribution — harvesting & distribution
 
-> Tylko tier `internal` — chronimy provenance treści.
+> `internal` tier only — we protect content provenance.
 
-## Kiedy używać
-Operacje wewnętrzne redakcji: zaciąg źródeł, subskrypcje tematów, publikacja na zewnętrzne kanały (WordPress/X/RSS).
+## When to use
+Internal editorial operations: source harvesting, topic subscriptions, publishing to external channels (WordPress/X/RSS).
 
-## Narzędzia
-| Narzędzie | Po co | Tier |
+## Tools
+| Tool | Purpose | Tier |
 |---|---|---|
-| `rak_crawl_search` | wyszukiwanie w zaciągniętych źródłach | internal |
-| `rak_crawl_add_source` | dodanie źródła (SSRF-safe) | internal |
-| `rak_crawl_subscribe` | subskrypcja tematu/bota | internal |
-| `rak_distribution_publish` | publikacja na WordPress/X/RSS (scheduleAt) | internal |
+| `rak_crawl_search` | search harvested sources | internal |
+| `rak_crawl_add_source` | add a source (SSRF-safe) | internal |
+| `rak_crawl_subscribe` | subscribe to a topic/bot | internal |
+| `rak_distribution_publish` | publish to WordPress/X/RSS (scheduleAt) | internal |
 
-## Tier / koszt
-Wyłącznie `internal` (scope `skills:action` + tier internal).
+## Tier / cost
+`internal` only (scope `skills:action` + internal tier).
 
-## Przykładowe prompty (internal)
-- „Dodaj to źródło RSS do zaciągu dla woj. lubelskiego."
-- „Opublikuj ten artykuł na WordPress + wątek X jutro o 9:00."
+## Example prompts (internal)
+- "Add this RSS source to the harvest for the Lublin region."
+- "Publish this article to WordPress + an X thread tomorrow at 9:00."

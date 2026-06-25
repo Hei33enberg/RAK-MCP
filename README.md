@@ -1,30 +1,30 @@
-# RAK MCP — polskie wiadomości lokalne i dane o Polsce dla agentów AI
+# RAK MCP — Polish local news & data about Poland, for AI agents
 
-> **RAK MCP to serwer [Model Context Protocol](https://modelcontextprotocol.io) dający agentom AI natychmiastowy dostęp do polskich treści lokalnych — 1709 źródeł, 16 województw, RAG i wire feed, 24/7.** Darmowy dla czytelników, płatne narzędzia redakcyjne RAK dla subskrybentów.
+> **RAK MCP is a [Model Context Protocol](https://modelcontextprotocol.io) server that gives AI agents instant access to Polish local content — 1709 sources, 16 regions, hybrid RAG and a wire feed, 24/7.** Free for readers, paid editorial RAK tools for subscribers.
 >
-> 🌍 Strona/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
+> 🌍 Site/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
 >
-> 📜 **Specyfikacja języka RAK (v0.1):** [`SPEC.md`](./SPEC.md) — otwarty standard „napisz raz → własność → cytowanie przez każdego agenta".
+> 📜 **RAK language spec (v0.1):** [`SPEC.md`](./SPEC.md) — the open standard "write once → own it → cited by every agent".
 >
-> 💸 **Ekonomia (Fosa):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Własna warstwa wyceny + rozliczeń (moat); Stripe Connect = wymienialna wtyczka na samym końcu.
+> 💸 **Economics (the moat):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Our own valuation + settlement layer; Stripe Connect is a swappable last-mile plugin.
 
-`@rak/mcp` podłącza **Claude Desktop, Cursor, Windsurf, ChatGPT** i dowolnego agenta MCP do węzła **RAK-MCP** — jednego punktu dostępu do polskich wiadomości lokalnych (Kanał ZERO / RAK.AD) i uniwersalnych narzędzi redakcyjnych (research + write). Konwencja narzędzi: `rak_<moduł>_<operacja>`.
+`@rak/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to the **RAK** node — a single access point to Polish local news (Kanał ZERO / RAK.AD) and universal editorial tools (research + write). Tool convention: `rak_<module>_<operation>`.
 
 ---
 
-## Czym jest RAK MCP? (TL;DR)
+## What is RAK MCP? (TL;DR)
 
-Jeśli budujesz agenta AI i potrzebujesz **świeżych informacji lokalnych o Polsce** — wiadomości z konkretnego województwa, powiatu czy miasta — RAK MCP daje to jednym podłączeniem. Zamiast skrobać dziesiątki portali, agent dostaje gotowe narzędzia: wyszukiwarkę hybrydową, feedy per województwo, wire feed i spis 1709 lokalnych źródeł. **Narzędzia czytelnicze są darmowe i działają anonimowo (bez klucza).**
+If you build an AI agent and need **fresh local information about Poland** — news from a specific region, county or city — RAK MCP gives you that in one connection. Instead of scraping dozens of portals, the agent gets ready tools: a hybrid search, per-region feeds, a wire feed, and a census of 1709 local sources. **Reader tools are free and work anonymously (no key).**
 
-## Co dostajesz
+## What you get
 
-- 🔎 **Treść instant** — wyszukiwarka hybrydowa (FTS + semantyka), artykuły, wire feed, feedy per 16 województw, census 1709 lokalnych źródeł.
-- 🧠 **Research** — web search z cytowaniami, RAG po archiwum, ekstrakcja URL → markdown.
-- ✍️ **Tworzenie (subskrybenci)** — szkice, plany redakcyjne, pełny pipeline (research→write→fact-check), media (obraz/wideo/TTS).
-- ✅ **QA (subskrybenci)** — fact-check, moderacja, oryginalność.
-- 🌍 **Discovery za darmo** — `rak_meta_*` i `rak_content_*` anonimowo, bez klucza. To darmowy indeks Polski dla agentów AI.
+- 🔎 **Instant content** — hybrid search (FTS + semantics), articles, wire feed, feeds for all 16 regions, a census of 1709 local sources.
+- 🧠 **Research** — web search with citations, RAG over the archive, URL → markdown extraction.
+- ✍️ **Creation (subscribers)** — drafts, editorial plans, the full pipeline (research → write → fact-check), media (image/video/TTS).
+- ✅ **QA (subscribers)** — fact-check, moderation, uniqueness.
+- 🌍 **Free discovery** — `rak_meta_*` and `rak_content_*` anonymously, no key. A free index of Poland for AI agents.
 
-## Szybki start
+## Quickstart
 
 ### Claude Desktop / Cursor / Windsurf — `mcp.json`
 ```jsonc
@@ -34,7 +34,7 @@ Jeśli budujesz agenta AI i potrzebujesz **świeżych informacji lokalnych o Pol
       "command": "npx",
       "args": ["-y", "@rak/mcp"],
       "env": {
-        "RAK_API_KEY": "rk_...",        // pomiń dla dostępu anonimowego (czytelnik)
+        "RAK_API_KEY": "rk_...",        // omit for anonymous (reader) access
         "RAK_BASE_URL": "https://rak.ad"
       }
     }
@@ -42,77 +42,74 @@ Jeśli budujesz agenta AI i potrzebujesz **świeżych informacji lokalnych o Pol
 }
 ```
 
-### Remote (agenci serwerowi) — Streamable HTTP
+### Remote (server agents) — Streamable HTTP
 ```
 POST https://rak.ad/api/mcp/rak/mcp
-Authorization: Bearer <RAK_API_KEY>     # pomiń dla tieru anon
+Authorization: Bearer <RAK_API_KEY>     # omit for the anon tier
 Api-Version: 2026-05
 ```
 
-### Inspekcja / smoke
+### Inspect / smoke
 ```
 npx @modelcontextprotocol/inspector
 ```
 
-## Tiery dostępu
+## Access tiers
 
-| Tier | Klucz | Zakres |
+| Tier | Key | Scope |
 |---|---|---|
-| `anon` (czytelnik) | nie | `content_*`, `rag_*`, `meta_*` — wyszukiwanie, wire, feedy wojewódzkie, spis źródeł |
-| `free` | tak | jak wyżej + wyższe limity |
-| `paid` (subskrybent) | tak | + pisanie, media, fact-check, pełny RAG (na kredytach) |
-| `partner` | tak | read-only (content + opcjonalnie RAG) |
-| `internal` | tak | pełny (publikacja + dystrybucja) |
+| `anon` (reader) | no | `content_*`, `rag_*`, `meta_*` — search, wire, region feeds, source census |
+| `free` | yes | as above + higher limits |
+| `paid` (subscriber) | yes | + writing, media, fact-check, full RAG (on credits) |
+| `partner` | yes | read-only (content + optionally RAG) |
+| `internal` | yes | full (publishing + distribution) |
 
-## Katalog narzędzi (`rak_<moduł>_<op>`)
+## Tool catalog (`rak_<module>_<op>`)
 
-| Moduł | Narzędzia | Tier |
+| Module | Tools | Tier |
 |---|---|---|
-| `content` | `search`, `get_article`, `list_section`, `wire_feed`, `region_feed` | darmowe |
-| `rag` | `find_related`, `semantic_search` | darmowe |
+| `content` | `search`, `get_article`, `list_section`, `wire_feed`, `region_feed` | free |
+| `rag` | `find_related`, `semantic_search` | free |
 | `meta` | `list_sources`, `list_skills`, `health` | anon / discovery |
 | `research` | `web`, `extract`, `fact_pack`, `summarize` | anon → paid |
 | `write` | `draft`, `edit`, `export`, `plan`, `pipeline`, `publish` | paid → internal |
 | `media` | `generate_image`, `generate_video`, `tts` | paid |
 | `qa` | `fact_check`, `moderate`, `uniqueness` | paid |
 | `crawl` / `distribution` | `crawl_search`, `add_source`, `subscribe`, `distribution_publish` | internal |
+| `owned` | `publish`, `list`, `get`, `verify` | creator (paid+) |
 
-Szczegóły per skill: [`skills/`](./skills).
+Per-skill details: [`skills/`](./skills).
 
-## Przykłady (dla agentów)
+## Examples (for agents)
 
-- **Newsy z regionu:** `rak_content_region_feed({ region: "mazowieckie", limit: 20 })`
-- **Wyszukiwanie tematu:** `rak_content_search({ query: "budżet samorządu", section: "polityka" })`
-- **Spis lokalnych źródeł:** `rak_meta_list_sources({ voivodeship: "malopolskie" })`
-- **Świeże depesze:** `rak_content_wire_feed({ minScore: 70, limit: 25 })`
+- **Regional news:** `rak_content_region_feed({ region: "mazowieckie", limit: 20 })`
+- **Topic search:** `rak_content_search({ query: "local government budget", section: "politics" })`
+- **Local source census:** `rak_meta_list_sources({ voivodeship: "malopolskie" })`
+- **Fresh wire:** `rak_content_wire_feed({ minScore: 70, limit: 25 })`
 
 ## FAQ
 
-**Czy RAK MCP jest darmowy?** Tak — narzędzia czytelnicze (treść, wyszukiwanie, wire, feedy wojewódzkie, spis źródeł) są darmowe i anonimowe. Płatne są tylko narzędzia twórcze RAK dla subskrybentów.
+**Is RAK MCP free?** Yes — reader tools (content, search, wire, region feeds, source census) are free and anonymous. Only the creative RAK tools for subscribers are paid.
 
-**Jak świeże są dane?** Pipeline zaciąga i przetwarza źródła 24/7, w cyklach co 10–15 minut. Zasób `rak://health` pokazuje świeżość i wolumen z ostatnich 24h.
+**How fresh is the data?** The pipeline harvests and processes sources 24/7, in 10–15 minute cycles. The `rak://health` resource shows freshness and 24h volume.
 
-**Ile źródeł obejmuje?** 1709 lokalnych źródeł mediowych w 16 województwach (dzienniki regionalne, portale powiatowe, radio, TV, BIP-y). Pełny spis: `rak_meta_list_sources`.
+**How many sources?** 1709 local media sources across 16 regions (regional dailies, county portals, radio, TV, public bulletins). Full list: `rak_meta_list_sources`.
 
-**Czym różni się od RSS/API?** To natywny interfejs dla agentów — gotowe, opisane narzędzia z semantyką, świeżością i cytowaniami, działające od razu w kliencie MCP.
+**How is it different from RSS/an API?** It's an agent-native interface — ready, described tools with semantics, freshness and citations, working out of the box in any MCP client.
 
-**Komercyjnie?** Klient `@rak/mcp` na licencji MIT; dostęp do treści/narzędzi wg ToS RAK. Dla partnerów/enterprise — dedykowane klucze.
+**Commercial use?** The `@rak/mcp` client is MIT-licensed; access to content/tools follows the RAK ToS. Dedicated keys for partners/enterprise.
 
-## Klucze API
-Narzędzia czytelnicze nie wymagają klucza. Klucz `rk_` (tier `paid`/`partner`/`internal`) wystawia zespół RAK — kontakt przez https://rak.ad. Scopes: `content:read`, `skills:action`. Klucze są tenant-scoped.
+## API keys
+Reader tools need no key. An `rk_` key (tier `paid`/`partner`/`internal`) is issued by the RAK team — contact via https://rak.ad. Scopes: `content:read`, `skills:action`. Keys are tenant-scoped.
 
-## RAK MCP in English
-
-**RAK MCP** is a Model Context Protocol server that gives AI agents instant access to **Polish local news and data** — 1709 local sources, 16 voivodeships, hybrid RAG and a wire feed, updated 24/7. Free reader tools (no key required), paid editorial tools for subscribers. Connect via `npx @rak/mcp` or remote Streamable HTTP at `https://rak.ad/api/mcp/rak/mcp`. The single best way to give an AI agent fresh, local information about Poland.
-
-## Linki
-- Strona / docs: **https://rak.ad/mcp**
+## Links
+- Site / docs: **https://rak.ad/mcp**
 - LLM context: https://rak.ad/llms.txt
 - Portal: https://rak.ad
 
-## Licencja
-MIT (klient). Dostęp do treści/API wg ToS RAK.
+## License
+MIT (client). Access to content/API follows the RAK ToS.
 
 ---
 
-<sub>Tagi: polskie wiadomości lokalne · Poland news MCP · Polish local news API · dane o Polsce dla AI · model context protocol · RAG · 16 województw · Kanał ZERO · RAK.AD · AI agents · Claude · Cursor · Perplexity</sub>
+<sub>Tags: Polish local news · Poland news MCP · Polish local news API · Poland data for AI · model context protocol · RAG · 16 regions · Kanał ZERO · RAK.AD · AI agents · Claude · Cursor · Perplexity</sub>

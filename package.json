@@ -2,7 +2,7 @@
   "name": "@rak/mcp",
   "version": "0.0.0",
   "private": true,
-  "description": "RAK Model Context Protocol — polskie treści lokalne (artykuły, wire, feedy per województwo, 1709 źródeł) + narzędzia redakcyjne AI (research, pisanie, media, QA) dla agentów.",
+  "description": "RAK Model Context Protocol — Polish local content (articles, wire, per-region feeds, 1709 sources) + AI editorial tools (research, writing, media, QA) for agents.",
   "type": "module",
   "bin": { "rak-mcp": "dist/index.js" },
   "main": "dist/index.js",

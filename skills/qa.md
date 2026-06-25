@@ -1,18 +1,18 @@
-# SKILL: rak-qa — kontrola jakości
+# SKILL: rak-qa — quality control
 
-## Kiedy używać
-Gdy agent waliduje treść przed publikacją: weryfikacja faktów ze źródłami, moderacja (hate/adult/profanity), sprawdzenie unikalności/plagiatu.
+## When to use
+When an agent validates content before publishing: fact verification against sources, moderation (hate/adult/profanity), uniqueness/plagiarism check.
 
-## Narzędzia
-| Narzędzie | Po co | Tier |
+## Tools
+| Tool | Purpose | Tier |
 |---|---|---|
-| `rak_qa_fact_check` | verdict + cytowania | paid |
-| `rak_qa_moderate` | flagowanie ryzykownych treści | paid |
-| `rak_qa_uniqueness` | % oryginalności + źródła | paid |
+| `rak_qa_fact_check` | verdict + citations | paid |
+| `rak_qa_moderate` | flag risky content | paid |
+| `rak_qa_uniqueness` | % originality + sources | paid |
 
-## Tier / koszt
-`paid` (kredyty wg cennika RAK).
+## Tier / cost
+`paid` (credits per RAK pricing).
 
-## Przykładowe prompty
-- „Zweryfikuj te 3 twierdzenia względem podanych źródeł."
-- „Sprawdź unikalność tego tekstu i pokaż potencjalne źródła."
+## Example prompts
+- "Verify these 3 claims against the provided sources."
+- "Check the uniqueness of this text and show potential sources."

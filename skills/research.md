@@ -1,21 +1,21 @@
 # SKILL: rak-research — research & retrieval
 
-## Kiedy używać
-Gdy agent buduje research pod tekst: szybki web search, agregacja faktów ze źródłami, retrieval z archiwum RAK (hybryda + MMR), ekstrakcja URL → markdown.
+## When to use
+When an agent builds research for a piece: fast web search, fact aggregation with sources, retrieval from the RAK archive (hybrid + MMR), URL → markdown extraction.
 
-## Narzędzia
-| Narzędzie | Po co | Tier |
+## Tools
+| Tool | Purpose | Tier |
 |---|---|---|
-| `rak_research_web` | web search + cytowania | anon/free 5/dzień/IP, dalej paid |
-| `rak_research_fact_pack` | fakty + źródła + ryzyka | paid |
-| `rak_research_summarize` | streszczenie tematu z archiwum | paid |
-| `rak_research_extract` | dowolny URL → czysty markdown (SSRF-safe) | paid |
-| `rak_rag_find_related` | powiązane artykuły (similarity) | paid |
-| `rak_rag_semantic_search` | dense search po embeddingach | paid |
+| `rak_research_web` | web search + citations | anon/free 5/day/IP, then paid |
+| `rak_research_fact_pack` | facts + sources + risks | paid |
+| `rak_research_summarize` | topic summary from the archive | paid |
+| `rak_research_extract` | any URL → clean markdown (SSRF-safe) | paid |
+| `rak_rag_find_related` | related articles (similarity) | paid |
+| `rak_rag_semantic_search` | dense search over embeddings | paid |
 
-## Tier / koszt
-`search_web` jest darmowy z twardym limitem 5/dzień/IP. Pozostałe `paid` (kredyty wg cennika RAK).
+## Tier / cost
+`rak_research_web` is free with a hard 5/day/IP limit. The rest are `paid` (credits per RAK pricing).
 
-## Przykładowe prompty
-- „Zbuduj fact pack o reformie planowania przestrzennego — web + archiwum RAK."
-- „Znajdź 5 powiązanych artykułów do tego tematu."
+## Example prompts
+- "Build a fact pack on the spatial-planning reform — web + RAK archive."
+- "Find 5 related articles for this topic."

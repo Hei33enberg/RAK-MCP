@@ -1,21 +1,21 @@
-# SKILL: rak-write — tworzenie i publikacja treści
+# SKILL: rak-write — content creation & publishing
 
-## Kiedy używać
-Gdy agent ma stworzyć tekst end-to-end: szkic → plan redakcyjny → pełny pipeline (research/write/fact-check) → publikacja. Operacje zapisujące.
+## When to use
+When an agent creates a piece end-to-end: draft → editorial plan → full pipeline (research/write/fact-check) → publish. Write operations.
 
-## Narzędzia
-| Narzędzie | Po co | Tier |
+## Tools
+| Tool | Purpose | Tier |
 |---|---|---|
-| `rak_write_draft` | szkic → artefakt | paid (credits) |
-| `rak_write_plan` | plan redakcyjny (blueprint) | paid |
-| `rak_write_pipeline` | pełny pipeline async `{jobId, pollUrl}` | paid (credits) |
-| `rak_write_edit` | edycja, nowa wersja | paid (credits) |
+| `rak_write_draft` | draft → artifact | paid (credits) |
+| `rak_write_plan` | editorial plan (blueprint) | paid |
+| `rak_write_pipeline` | full async pipeline → `{jobId, pollUrl}` | paid (credits) |
+| `rak_write_edit` | edit, new version | paid (credits) |
 | `rak_write_export` | export / publish | paid / internal |
-| `rak_write_publish` | publikacja do portalu (now/cron) | internal |
+| `rak_write_publish` | publish to the portal (now/scheduled) | internal |
 
-## Tier / koszt
-`paid` na kredytach (wg cennika RAK); `execute_pipeline` to najdroższe narzędzie. Pisanie do portalu (`schedule_publish`) = tylko internal. Pipeline async — odpytuj `pollUrl`.
+## Tier / cost
+`paid` on credits (RAK pricing); `rak_write_pipeline` is the most expensive tool. Publishing to the portal is `internal` only. The pipeline is async — poll `pollUrl`.
 
-## Przykładowe prompty
-- „Napisz szkic newsa o podwyżkach w komunikacji miejskiej."
-- „Odpal pełny pipeline na temat X i podaj pollUrl."
+## Example prompts
+- "Write a draft news piece about public-transport fare hikes."
+- "Run the full pipeline on topic X and return the pollUrl."
