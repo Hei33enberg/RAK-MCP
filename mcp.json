@@ -2,7 +2,7 @@
   "mcpServers": {
     "rak": {
       "command": "npx",
-      "args": ["-y", "@rak/mcp"],
+      "args": ["-y", "@rak-ad/mcp"],
       "env": {
         "RAK_API_KEY": "rk_...",
         "RAK_BASE_URL": "https://rak.ad",

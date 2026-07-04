@@ -1,4 +1,4 @@
-name: Publish @rak/mcp to npm (provenance)
+name: Publish @rak-ad/mcp to npm (provenance)
 
 on:
   push:

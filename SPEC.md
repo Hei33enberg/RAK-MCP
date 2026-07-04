@@ -94,7 +94,7 @@ RAK is spoken over **MCP**. The reference endpoint:
 
 ```
 POST https://rak.ad/api/mcp/rak/mcp        # Streamable HTTP
-# or:  npx -y @rak/mcp                      # stdio proxy
+# or:  npx -y @rak-ad/mcp                      # stdio proxy
 Authorization: Bearer rk_...                # omit for the anonymous reader tier
 ```
 
@@ -151,7 +151,7 @@ RAK does not compete with these; it is the **creator-first object** that ties th
 
 - `rak_version` is semver. This is **v0.1 (draft)**. Breaking changes bump the major; tools are deprecated with a support window, never silently broken.
 - Company-led-open today (the MCP playbook). A standards-body donation (W3C CG / Linux Foundation) is on the table once adoption warrants it (cf. AP2→FIDO, x402→Linux Foundation).
-- The spec is open (MIT). The reference node and `@rak/mcp` client are MIT. Access to content/tools follows each node's ToS.
+- The spec is open (MIT). The reference node and `@rak-ad/mcp` client are MIT. Access to content/tools follows each node's ToS.
 
 ---
 

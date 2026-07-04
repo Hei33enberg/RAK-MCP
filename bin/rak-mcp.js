@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * @rak/mcp — zero-config bridge do hostowanego RAK MCP (remote streamable-HTTP).
+ * @rak-ad/mcp — zero-config bridge do hostowanego RAK MCP (remote streamable-HTTP).
  *
- * Klienty stdio-only (które nie umieją remote MCP) odpalają `npx -y @rak/mcp`; ten wrapper
+ * Klienty stdio-only (które nie umieją remote MCP) odpalają `npx -y @rak-ad/mcp`; ten wrapper
  * proxuje stdio ↔ https://rak.ad/api/mcp/rak/mcp przez `mcp-remote`. Klienty z natywnym remote
  * MCP (Claude Code, Cursor) mogą pominąć paczkę i wpiąć URL bezpośrednio.
  *
@@ -25,6 +25,6 @@ const child = spawn("npx", args, {
 })
 child.on("exit", (code) => process.exit(code == null ? 0 : code))
 child.on("error", (err) => {
-  console.error("[@rak/mcp] nie udało się uruchomić mcp-remote:", err.message)
+  console.error("[@rak-ad/mcp] nie udało się uruchomić mcp-remote:", err.message)
   process.exit(1)
 })

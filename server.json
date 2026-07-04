@@ -11,7 +11,7 @@
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@rak/mcp",
+      "identifier": "@rak-ad/mcp",
       "version": "0.1.0",
       "transport": { "type": "stdio" },
       "environmentVariables": [

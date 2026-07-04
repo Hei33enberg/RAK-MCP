@@ -1,6 +1,6 @@
 # RAK-MCP ↔ Produkt — strategia synchronizacji (jak nad tym zapanować)
 
-> **Problem (po ludzku):** RAK-MCP to osobny, publiczny protokół (`@rak/mcp`, narzędzia `rak_<moduł>_<op>`)
+> **Problem (po ludzku):** RAK-MCP to osobny, publiczny protokół (`@rak-ad/mcp`, narzędzia `rak_<moduł>_<op>`)
 > który opakowuje API produktu (rak.ad). Produkt zmienia się codziennie (reader, narzędzia IDE/Stanowski,
 > endpointy API, schematy). Bez procesu MCP **po cichu się rozjeżdża z produktem** → agenci/klienci
 > dostają martwe albo błędne narzędzia, a nikt tego nie zauważa aż ktoś się poskarży.
@@ -14,7 +14,7 @@
 
 - **Powierzchnia MCP:** ~61 narzędzi `rak_*` (content, research, write, media, qa, rag, owned, crawl,
   distribution, meta) — patrz [SPEC.md](./SPEC.md) §7 (tabela namespace).
-- **Transport:** `@rak/mcp` = proxy. Konfiguracja: `RAK_BASE_URL=https://rak.ad` + `RAK_API_KEY` + `RAK_TENANT_ID`.
+- **Transport:** `@rak-ad/mcp` = proxy. Konfiguracja: `RAK_BASE_URL=https://rak.ad` + `RAK_API_KEY` + `RAK_TENANT_ID`.
   Czyli **każde narzędzie woła endpoint rak.ad**. Zmiana endpointu = potencjalnie zepsute narzędzie.
 - **Druga powierzchnia (ryzyko duplikacji):** IDE/Stanowski ma własne narzędzia `creator.*`
   (`defineAiTool` w `rak-runtime`, packs research/write/media — robione przez CTO#2). To **równoległa
@@ -38,7 +38,7 @@
                   |
                   | (1) codegen
                   v
-   [ tools.manifest.json ]  --(2) generuje-->  [ @rak/mcp wrappery + SPEC.md §7 ]
+   [ tools.manifest.json ]  --(2) generuje-->  [ @rak-ad/mcp wrappery + SPEC.md §7 ]
                   |
                   | (3) CI drift-gate (porównuje manifest vs MCP vs SPEC)
                   | (4) nightly smoke-test (woła każde narzędzie na żywym rak.ad)

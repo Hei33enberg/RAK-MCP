@@ -1,5 +1,5 @@
 {
-  "name": "@rak/mcp",
+  "name": "@rak-ad/mcp",
   "version": "0.1.0",
   "description": "RAK Model Context Protocol — Polish local content (articles, wire, per-region feeds, 1709 sources) + AI editorial tools (research, writing, media, QA) for agents.",
   "type": "module",

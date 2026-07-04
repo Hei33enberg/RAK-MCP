@@ -2,13 +2,13 @@
 
 > **RAK MCP is a [Model Context Protocol](https://modelcontextprotocol.io) server that gives AI agents instant access to Polish local content — 1709 sources, 16 regions, hybrid RAG and a wire feed, 24/7.** Free for readers, paid editorial RAK tools for subscribers.
 >
-> 🌍 Site/docs: **https://rak.ad/mcp** · 📦 npm: `@rak/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
+> 🌍 Site/docs: **https://rak.ad/mcp** · 📦 npm: `@rak-ad/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
 >
 > 📜 **RAK language spec (v0.1):** [`SPEC.md`](./SPEC.md) — the open standard "write once → own it → cited by every agent".
 >
 > 💸 **Economics (the moat):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Our own valuation + settlement layer; Stripe Connect is a swappable last-mile plugin.
 
-`@rak/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to the **RAK** node — a single access point to Polish local news (Kanał ZERO / RAK.AD) and universal editorial tools (research + write). Tool convention: `rak_<module>_<operation>`.
+`@rak-ad/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to the **RAK** node — a single access point to Polish local news (Kanał ZERO / RAK.AD) and universal editorial tools (research + write). Tool convention: `rak_<module>_<operation>`.
 
 ---
 
@@ -32,7 +32,7 @@ If you build an AI agent and need **fresh local information about Poland** — n
   "mcpServers": {
     "rak": {
       "command": "npx",
-      "args": ["-y", "@rak/mcp"],
+      "args": ["-y", "@rak-ad/mcp"],
       "env": {
         "RAK_API_KEY": "rk_...",        // omit for anonymous (reader) access
         "RAK_BASE_URL": "https://rak.ad"
@@ -97,7 +97,7 @@ Per-skill details: [`skills/`](./skills).
 
 **How is it different from RSS/an API?** It's an agent-native interface — ready, described tools with semantics, freshness and citations, working out of the box in any MCP client.
 
-**Commercial use?** The `@rak/mcp` client is MIT-licensed; access to content/tools follows the RAK ToS. Dedicated keys for partners/enterprise.
+**Commercial use?** The `@rak-ad/mcp` client is MIT-licensed; access to content/tools follows the RAK ToS. Dedicated keys for partners/enterprise.
 
 ## API keys
 Reader tools need no key. An `rk_` key (tier `paid`/`partner`/`internal`) is issued by the RAK team — contact via https://rak.ad. Scopes: `content:read`, `skills:action`. Keys are tenant-scoped.

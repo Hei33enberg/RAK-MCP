@@ -18,7 +18,7 @@ startCommand:
   commandFunction: |-
     (config) => ({
       command: 'npx',
-      args: ['-y', '@rak/mcp'],
+      args: ['-y', '@rak-ad/mcp'],
       env: {
         RAK_API_KEY: config.RAK_API_KEY || '',
         RAK_BASE_URL: config.RAK_BASE_URL || 'https://rak.ad',
