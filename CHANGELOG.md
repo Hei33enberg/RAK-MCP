@@ -2,6 +2,11 @@
 
 All notable changes to `@rak-ad/mcp` and the RAK OS public surface. Format: [Keep a Changelog](https://keepachangelog.com); versioning follows the npm package.
 
+## [0.2.2] — 2026-07-15
+
+### Changed
+- **Naming corrections.** Reference agent is **Stanosky** (was "Stanowski") across SPEC/discovery/keywords. RFC-0001 (`irc`) and ROADMAP made **persona-agnostic** — the talk-surface host is the Crown's choice, none hardcoded (removed a mistaken "Tarnowski" persona; Tarnowski is a place, not an agent).
+
 ## [0.2.1] — 2026-07-15
 
 ### Changed

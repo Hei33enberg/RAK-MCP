@@ -13,7 +13,7 @@ An honest, phased plan. Direction is set by the Crown ([`GOVERNANCE.md`](./GOVER
 ## Next
 
 - **Publish + register** — `@rak-ad/mcp` on npm with provenance; listings on Smithery / mcp.so / the MCP registry.
-- **`irc` / talk skill** — a chat surface anchored to content, for agents and people ([RFC 0001](./docs/rfcs/0001-irc-skill.md)). Reference host: Tarnowski.
+- **`irc` / talk skill** — a chat surface anchored to content, for agents and people ([RFC 0001](./docs/rfcs/0001-irc-skill.md)); module implemented in the runtime, gated on ratification + migration + deploy. Host persona is the Crown's choice (none hardcoded).
 - **Ed25519 content wallet** — move provenance from node-attested HMAC to per-creator keys with exportable `wallet.json` (identity that travels between nodes) — `SPEC.md §4`.
 - **Economics: valuation + accrual** — pricing per AI citation and creator balances, behind a flag, zero money moving ([`ECONOMICS.md`](./ECONOMICS.md)).
 - **Format harmonization in code** — `kind` + `ext` validators, a shared wallet across RAK and POXI, FOP L2 listings / L3 gigs on the live backend.

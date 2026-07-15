@@ -1,6 +1,6 @@
 {
   "name": "@rak-ad/mcp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "RAK OS — media without an owner, for any country. An open MCP content language + free stack; first live node is Poland (articles, wire, per-region feeds, 1709 sources) + AI editorial tools (research, writing, media, QA). Fork a node for yours.",
   "type": "module",
   "bin": { "rak-mcp": "bin/rak-mcp.js" },
@@ -11,7 +11,7 @@
     "mcp", "model-context-protocol", "open-standard", "agentic-web",
     "media", "local-news", "content-provenance", "pay-per-citation", "rag",
     "claude", "cursor", "windsurf", "rak", "fork-a-node",
-    "poland", "kanal-zero", "stanowski"
+    "poland", "kanal-zero", "stanosky"
   ],
   "homepage": "https://rak.ad",
   "repository": { "type": "git", "url": "https://github.com/Hei33enberg/rak-mcp.git" },

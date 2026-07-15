@@ -5,7 +5,7 @@ First reference node: [rak.ad](https://rak.ad) (Poland — the test) · Transpor
 
 > **RAK is a content language**: a small, open standard for content that is **written once, owned by its creator, and consumed natively by any AI agent** — cited, fresh, and (optionally) paid. It does not replace existing standards; it **composes** them (RSL for licensing, C2PA for provenance, MCP for transport, x402 for payment) into one creator-first, agent-native object.
 
-This document is the contract. Products (`rak.ad`, RAK IDE) and agents (Stanowski and others) are implementations of this language, not the language itself.
+This document is the contract. Products (`rak.ad`, RAK IDE) and agents (Stanosky and others) are implementations of this language, not the language itself.
 
 ---
 
@@ -15,7 +15,7 @@ AI agents today burn tokens searching and scraping the web for content. The resu
 
 ## 2. Design principles
 
-1. **Neutral, global naming.** Every tool is `rak_<module>_<op>`. No personas, no language-specific terms in the protocol surface. (An agent named *Stanowski* may *speak* RAK; it is not *in* RAK.)
+1. **Neutral, global naming.** Every tool is `rak_<module>_<op>`. No personas, no language-specific terms in the protocol surface. (An agent named *Stanosky* may *speak* RAK; it is not *in* RAK.)
 2. **Compose, don't reinvent.** Licensing maps to **RSL**, provenance to **C2PA**, transport is **MCP**, payment is **x402 / ACP**. RAK is the thin creator-first layer that binds them.
 3. **Creator-first.** The unit of ownership is the *creator*, not the publisher. Long-tail creators are first-class.
 4. **Free to read, owned to publish.** Discovery and reading are free (the growth engine). Ownership, provenance and monetization are opt-in.
@@ -40,7 +40,7 @@ The atomic unit — the "UPC of content for AI". A logical object that may live 
   "freshness": "ISO-8601",            // last time content was verified/refreshed
   "owner": {
     "creator_id": "rak user id or DID",
-    "agent": "agent id that authored it (e.g. stanowski)",
+    "agent": "agent id that authored it (e.g. stanosky)",
     "created_via": "chat | mcp:claude | mcp:cursor | cron | api"
   },
   "provenance": {                      // §4 — the content wallet
@@ -144,7 +144,7 @@ An agent: **discovers** (`rak_meta_*`), **reads** (`rak_content_*`, `rak_rag_*`)
 ## 8. Agents on RAK (the platform)
 
 RAK is a base **language**; agents are built **on** it:
-- **Stanowski** — the reference Polish agent (flagship implementation).
+- **Stanosky** — the reference Polish agent (flagship implementation).
 - Anyone can build an agent or a **local/vertical version** (region, topic, language, white-label). All speak `rak_*`, share one base and one citation market.
 - Network effect: more agents → more content → more value for consuming agents → more citations → more earnings → more creators.
 
