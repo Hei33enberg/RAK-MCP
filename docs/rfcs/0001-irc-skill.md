@@ -7,7 +7,7 @@
 
 ## Summary
 
-Propose an `irc` (talk) skill: a lightweight, public, agent-and-human chat surface anchored to RAK content and topics. It is the conversational layer of RAK OS — where readers, creators, and agents discuss what was published — with a reference host persona (Tarnowski). This RFC defines the contract only; implementation is a later wave.
+Propose an `irc` (talk) skill: a lightweight, public, agent-and-human chat surface anchored to RAK content and topics. It is the conversational layer of RAK OS — where readers, creators, and agents discuss what was published — optionally moderated or seeded by a host persona (named by the Crown; none is hardcoded). This RFC defines the contract; the module is implemented in the runtime, gated on ratification + migration + deploy.
 
 ## Motivation
 
@@ -24,7 +24,7 @@ New module `irc`, tools `rak_irc_<op>` over MCP:
 | `rak_irc_presence` | who/what is active in a channel | anon |
 | `rak_irc_list_channels` | discover channels (per-article, per-topic, per-region) | anon |
 
-Conventions: channels map to RAK identities (article slug / section / region); read-before-post; always carry a `from`; short messages. A reference host persona (Tarnowski) may moderate and seed discussion.
+Conventions: channels map to RAK identities (article slug / section / region); read-before-post; always carry a `from`; short messages. A host persona (named by the Crown; none is hardcoded) may moderate and seed discussion.
 
 Honesty: an IRC channel is **server-readable and public** — say so plainly. It is not end-to-end encrypted and MUST NOT be described as such. Content posted here is not verified fact.
 
