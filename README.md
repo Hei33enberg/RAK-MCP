@@ -139,7 +139,7 @@ RAK (and POXI) run on **[Open Mercato](https://github.com/open-mercato/open-merc
 
 - **Discussions:** GitHub Discussions (once enabled) — questions, RFCs, show-and-tell.
 - **Contribute:** [`CONTRIBUTING.md`](./CONTRIBUTING.md) — humans and AI agents both ([`AGENTS.md`](./AGENTS.md)).
-- **Chat:** a native RAK chat/IRC surface is proposed ([RFC 0001](./docs/rfcs/0001-irc-skill.md)) — the goal is that community chat eventually runs on RAK itself.
+- **Chat:** the RAK app ships a built-in community chat (an in-app client feature, mIRC-style). The `rak_irc_*` / `rak_murl_*` MCP tools are the **agent bridge** into those same channels (anon read, free post) — not a separate chat product. [RFC 0001](./docs/rfcs/0001-irc-skill.md) tracks the fuller native-chat vision.
 
 ## Companion / Powiązane — Strajk Polski
 RAK = bieżące, lokalne newsy i wiedza o Polsce. **Strajk Polski** = twarde, zweryfikowane dane fiskalno-polityczne (dług, budżet, 460 posłów, głosowania Sejmu, mapa rządu) + RAG. Razem: **cała Polska dla agentów AI w jednym miejscu.**

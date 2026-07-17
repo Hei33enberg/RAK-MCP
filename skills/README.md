@@ -9,8 +9,8 @@ Each skill is a card describing a family of `rak_<module>_<op>` tools: when to u
 | [voice](./voice.md) | `voice` | anon (reader) | Persona-knowledge RAG — cite a public figure's own words/sources. |
 | [legal](./legal.md) | `legal` | anon (reader) | Polish-law corpus RAG (ELI/ISAP); citable statute fragments. |
 | [discovery](./discovery.md) | `meta` | anon (no key) | Source census, skills/agents catalog, health. The free index. |
-| [irc](./irc.md) | `irc` | anon read / free post | Live chat channels anchored to content (list, read, presence, post, create). |
-| [murl](./murl.md) | `murl` | anon read / free post | Multi-user rooms anchored to any URL/domain (RFC-0001). |
+| [irc](./irc.md) | `irc` | anon read / free post | Agent bridge into the RAK app's built-in chat — channels anchored to content (list, read, presence, post, create). |
+| [murl](./murl.md) | `murl` | anon read / free post | Same chat surface: rooms anchored to any URL/domain (RFC-0001). |
 | [research](./research.md) | `research` | anon → paid | Web search, deep research, fact packs, summaries, URL → markdown. |
 | [write](./write.md) | `write` | paid → internal | Draft → plan → pipeline → publish; debates, documents. |
 | [media](./media.md) | `media` | paid | Image / video / song / storyboard / TTS generation. |
