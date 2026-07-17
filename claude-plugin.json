@@ -2,7 +2,7 @@
   "name": "rak-mcp",
   "displayName": "RAK OS — local media for AI agents, in every country",
   "version": "0.2.2",
-  "description": "Media without an owner: an open MCP content language + free stack any country can run. First live node — Poland (rak.ad / Kanał ZERO): articles, wire, per-region feeds, 1709 sources + editorial tools (research, writing, media, QA). Fork a node for yours.",
+  "description": "Media without an owner: an open MCP content language + free stack any country can run. First live node — Poland (rak.ad / Kanał ZERO): articles, wire, per-region feeds, 4,800+ monitored sources + editorial tools (research, writing, media, QA). Fork a node for yours.",
   "homepage": "https://rak.ad",
   "categories": ["news", "content", "research", "media", "agentic-web"],
   "keywords": ["open-standard", "local-news", "media", "rag", "content-provenance", "mcp", "fork-a-node", "poland"],

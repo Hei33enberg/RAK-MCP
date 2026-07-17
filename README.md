@@ -1,6 +1,6 @@
 # RAK OS — media without an owner, in every country
 
-> **RAK OS is an open content language for the agentic web + a free stack: give any country's media back to its people.** The `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) client connects any AI agent to the RAK network. **Poland (rak.ad) is the first live node — the proof:** 1709 local sources, 16 regions, hybrid RAG and a wire feed, 24/7, free for readers. Your country is next — fork a node.
+> **RAK OS is an open content language for the agentic web + a free stack: give any country's media back to its people.** The `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) client connects any AI agent to the RAK network. **Poland (rak.ad) is the first live node — the proof:** 4,800+ monitored local sources, 16 regions, hybrid RAG and a wire feed, 24/7, free for readers. Your country is next — fork a node.
 >
 > 🕊️ **Manifesto:** [`MANIFESTO.md`](./MANIFESTO.md) ([PL](./MANIFESTO.pl.md)) · 👑 **The Realm:** [`REALM.md`](./REALM.md) · 🏛️ **Governance:** [`GOVERNANCE.md`](./GOVERNANCE.md)
 >
@@ -16,11 +16,11 @@
 
 ## What is RAK OS? (TL;DR)
 
-RAK OS is how any country gives its local media back to its people: an open format + free tools any AI agent can read, and any community can run. **Poland is the first live node — the test.** If you build an AI agent and need fresh local information — from a specific region, county or city — the RAK node gives you that in one connection instead of scraping dozens of portals: a hybrid search, per-region feeds, a wire feed, and a census of 1709 local sources. **Reader tools are free and work anonymously (no key).** Your country is next — [fork a node](#build-your-own-rak).
+RAK OS is how any country gives its local media back to its people: an open format + free tools any AI agent can read, and any community can run. **Poland is the first live node — the test.** If you build an AI agent and need fresh local information — from a specific region, county or city — the RAK node gives you that in one connection instead of scraping dozens of portals: a hybrid search, per-region feeds, a wire feed, and 4,800+ monitored sources (incl. a curated census of 1,709 local outlets). **Reader tools are free and work anonymously (no key).** Your country is next — [fork a node](#build-your-own-rak).
 
 ## What you get
 
-- 🔎 **Instant content** — hybrid search (FTS + semantics), articles, wire feed, feeds for all 16 regions, a census of 1709 local sources.
+- 🔎 **Instant content** — hybrid search (FTS + semantics), articles, wire feed, feeds for all 16 regions, 4,800+ monitored sources (curated census of 1,709 local outlets).
 - 🧠 **Research** — web search with citations, RAG over the archive, URL → markdown extraction.
 - ✍️ **Creation (subscribers)** — drafts, editorial plans, the full pipeline (research → write → fact-check), media (image/video/TTS).
 - ✅ **QA (subscribers)** — fact-check, moderation, uniqueness.
@@ -101,7 +101,7 @@ Per-skill details: [`skills/`](./skills).
 
 **How fresh is the data?** The pipeline harvests and processes sources 24/7, in 10–15 minute cycles. The `rak://health` resource shows freshness and 24h volume.
 
-**How many sources?** On the first node (Poland): 1709 local media sources across 16 regions (regional dailies, county portals, radio, TV, public bulletins) — full list via `rak_meta_list_sources`. Every country's node runs its own census.
+**How many sources?** On the first node (Poland): **4,800+ monitored sources live right now** — local portals, X accounts, RSS feeds, YouTube channels (live count: `rak_meta_health.enabledCrawlSources`) — including a **curated census of 1,709 local media outlets** across 16 regions (regional dailies, county portals, radio, TV, public bulletins) with per-region metadata via `rak_meta_list_sources`. Every country's node runs its own census.
 
 **How is it different from RSS/an API?** It's an agent-native interface — ready, described tools with semantics, freshness and citations, working out of the box in any MCP client.
 

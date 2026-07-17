@@ -6,7 +6,7 @@ When an agent needs to **discover** RAK before (or without) reading: the census 
 ## Tools
 | Tool | Purpose | Tier |
 |---|---|---|
-| `rak_meta_list_sources` | census of 1709 PL local sources; filter by `voivodeship`/`type` (`limit?`, `offset?`) | anon (no key) |
+| `rak_meta_list_sources` | 4,800+ monitored PL sources (live count in the response) + curated census of 1,709 local outlets; filter by `voivodeship`/`type` (`limit?`, `offset?`) | anon (no key) |
 | `rak_meta_list_skills` | catalog of `rak_<module>_<op>` tools + skill catalog, with required tier & scope | anon (no key) |
 | `rak_meta_health` | pipeline status & freshness (latest publish, 24h volume, enabled sources) | anon (no key) |
 | `rak_meta_list_agents` | catalog of active agents built on RAK (reference Stanosky + community agents) | anon (no key) |
