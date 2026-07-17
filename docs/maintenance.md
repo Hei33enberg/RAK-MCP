@@ -40,7 +40,7 @@ Never republish an existing version — bump instead (npm rejects duplicate vers
 
 ## Drift prevention
 
-The MCP surface mirrors the product at rak.ad. The canonical tool definitions live in the product runtime; this repo's `skills/*.md` document them. Keep them in sync when tools change (the internal sync strategy is tracked privately). `smoke.mjs` is the backstop: it calls the live tools nightly and self-reports regressions.
+The MCP surface mirrors the product at rak.guru. The canonical tool definitions live in the product runtime; this repo's `skills/*.md` document them. Keep them in sync when tools change (the internal sync strategy is tracked privately). `smoke.mjs` is the backstop: it calls the live tools nightly and self-reports regressions.
 
 ## Security
 

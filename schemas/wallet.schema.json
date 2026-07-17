@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://rak.ad/schemas/wallet.schema.json",
+  "$id": "https://rak.guru/schemas/wallet.schema.json",
   "title": "RAK OS content wallet (shared, exportable identity)",
   "description": "One identity model across profiles and nodes (SPEC.md §4). HMAC-attested at MVP; Ed25519 with an exportable wallet.json at v1. RAK `owner`/`provenance` and FOP `author` bind to the same wallet — a creator's identity and history travel across RAK and POXI/FOP.",
   "type": "object",

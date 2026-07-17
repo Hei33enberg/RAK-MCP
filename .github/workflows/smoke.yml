@@ -32,7 +32,7 @@ jobs:
           title="RAK MCP smoke failing"
           body="The scheduled smoke test failed. Run: $RUN_URL
 
-          The RAK MCP anonymous surface (rak.ad) did not pass \`scripts/smoke.mjs\`. This usually means the live node, the endpoint, or the free-tier tools regressed. Investigate rak.ad, not this repo."
+          The RAK MCP anonymous surface (rak.guru) did not pass \`scripts/smoke.mjs\`. This usually means the live node, the endpoint, or the free-tier tools regressed. Investigate rak.guru, not this repo."
           existing=$(gh issue list --state open --label smoke-failing --json number -q '.[0].number')
           if [ -n "$existing" ]; then
             gh issue comment "$existing" --body "$body"

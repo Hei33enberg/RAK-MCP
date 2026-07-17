@@ -5,7 +5,7 @@
       "args": ["-y", "@rak-ad/mcp"],
       "env": {
         "RAK_API_KEY": "rk_...",
-        "RAK_BASE_URL": "https://rak.ad",
+        "RAK_BASE_URL": "https://rak.guru",
         "RAK_TENANT_ID": "rak"
       }
     }

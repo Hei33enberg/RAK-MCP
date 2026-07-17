@@ -13,7 +13,7 @@
     "claude", "cursor", "windsurf", "rak", "fork-a-node",
     "poland", "kanal-zero", "stanosky"
   ],
-  "homepage": "https://rak.ad",
+  "homepage": "https://rak.guru",
   "repository": { "type": "git", "url": "https://github.com/Hei33enberg/RAK-OS.git" },
   "license": "MIT",
   "publishConfig": { "access": "public" }

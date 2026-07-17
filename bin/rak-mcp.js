@@ -3,16 +3,16 @@
  * @rak-ad/mcp — zero-config bridge to the hosted RAK MCP (remote streamable-HTTP).
  *
  * stdio-only clients (that can't speak remote MCP) run `npx -y @rak-ad/mcp`; this wrapper
- * proxies stdio <-> https://rak.ad/api/mcp/rak/mcp via `mcp-remote`. Clients with native remote
+ * proxies stdio <-> https://rak.guru/api/mcp/rak/mcp via `mcp-remote`. Clients with native remote
  * MCP (Claude Code, Cursor) can skip the package and wire the URL directly.
  *
  * ENV:
  *   RAK_API_KEY   — an `rk_…` key (without it = free/anonymous tier: read + capped research tools).
- *   RAK_BASE_URL  — optionally override the host (default https://rak.ad).
+ *   RAK_BASE_URL  — optionally override the host (default https://rak.guru).
  */
 import { spawn } from "node:child_process"
 
-const base = (process.env.RAK_BASE_URL || "https://rak.ad").replace(/\/+$/, "")
+const base = (process.env.RAK_BASE_URL || "https://rak.guru").replace(/\/+$/, "")
 const url = `${base}/api/mcp/rak/mcp`
 const key = (process.env.RAK_API_KEY || "").trim()
 

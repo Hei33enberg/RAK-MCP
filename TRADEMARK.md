@@ -8,10 +8,10 @@ The spec, the `@rak-ad/mcp` client, and everything in this repository are **MIT-
 
 ## The mark is not
 
-**"RAK", "RAK OS", the RAK wordmark, and rak.ad** are the origin brand and stay with the Crown ([@Hei33enberg](https://github.com/Hei33enberg)). MIT covers the code, **not** the name.
+**"RAK", "RAK OS", the RAK wordmark, and rak.guru** are the origin brand and stay with the Crown ([@Hei33enberg](https://github.com/Hei33enberg)). MIT covers the code, **not** the name.
 
 - ✅ **You may:** run a RAK node, say it is "**built on RAK OS**" / "**RAK-compatible**" / "**a RAK node**", speak the `rak_*` protocol, and name your own node/agent whatever you like.
-- 🚫 **You may not:** name your project "RAK" or "RAK OS", use the RAK wordmark as your own, or present your node as the official RAK / rak.ad in a way that implies endorsement or origin.
+- 🚫 **You may not:** name your project "RAK" or "RAK OS", use the RAK wordmark as your own, or present your node as the official RAK / rak.guru in a way that implies endorsement or origin.
 
 Name your national node for your country or community (e.g. `RAK-compatible · <YourCountry>`), not as RAK itself. This keeps every fork free while keeping "RAK" meaning one thing.
 

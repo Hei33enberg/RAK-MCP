@@ -18,7 +18,7 @@ In scope:
 - The RAK content object / provenance model as specified in [`SPEC.md`](./SPEC.md) (e.g. signature or tamper-evidence weaknesses).
 - Tier/scope enforcement described in the skill docs (e.g. a reader-tier caller reaching a paid or internal tool).
 
-Out of scope (report to rak.ad directly, not here): the hosted rak.ad product surface, third-party dependencies with their own advisories, and volumetric/DoS testing against the live node.
+Out of scope (report to rak.guru directly, not here): the hosted rak.guru product surface, third-party dependencies with their own advisories, and volumetric/DoS testing against the live node.
 
 ## Our commitments
 

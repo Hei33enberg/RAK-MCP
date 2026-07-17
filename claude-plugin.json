@@ -2,8 +2,8 @@
   "name": "rak-mcp",
   "displayName": "RAK OS — local media for AI agents, in every country",
   "version": "0.2.2",
-  "description": "Media without an owner: an open MCP content language + free stack any country can run. First live node — Poland (rak.ad / Kanał ZERO): articles, wire, per-region feeds, 4,800+ monitored sources + editorial tools (research, writing, media, QA). Fork a node for yours.",
-  "homepage": "https://rak.ad",
+  "description": "Media without an owner: an open MCP content language + free stack any country can run. First live node — Poland (rak.guru / Kanał ZERO): articles, wire, per-region feeds, 4,800+ monitored sources + editorial tools (research, writing, media, QA). Fork a node for yours.",
+  "homepage": "https://rak.guru",
   "categories": ["news", "content", "research", "media", "agentic-web"],
   "keywords": ["open-standard", "local-news", "media", "rag", "content-provenance", "mcp", "fork-a-node", "poland"],
   "mcpServers": {
@@ -12,13 +12,13 @@
       "args": ["-y", "@rak-ad/mcp"],
       "env": {
         "RAK_API_KEY": "${RAK_API_KEY}",
-        "RAK_BASE_URL": "https://rak.ad",
+        "RAK_BASE_URL": "https://rak.guru",
         "RAK_TENANT_ID": "rak"
       }
     }
   },
   "remote": {
-    "url": "https://rak.ad/api/mcp/rak/mcp",
+    "url": "https://rak.guru/api/mcp/rak/mcp",
     "authorization": "Bearer ${RAK_API_KEY}",
     "headers": { "Api-Version": "2026-05" }
   },

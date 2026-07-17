@@ -1,16 +1,16 @@
 # RAK OS — media without an owner, in every country
 
-> **RAK OS is an open content language for the agentic web + a free stack: give any country's media back to its people.** The `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) client connects any AI agent to the RAK network. **Poland (rak.ad) is the first live node — the proof:** 4,800+ monitored local sources, 16 regions, hybrid RAG and a wire feed, 24/7, free for readers. Your country is next — fork a node.
+> **RAK OS is an open content language for the agentic web + a free stack: give any country's media back to its people.** The `@rak-ad/mcp` [Model Context Protocol](https://modelcontextprotocol.io) client connects any AI agent to the RAK network. **Poland (rak.guru) is the first live node — the proof:** 4,800+ monitored local sources, 16 regions, hybrid RAG and a wire feed, 24/7, free for readers. Your country is next — fork a node.
 >
 > 🕊️ **Manifesto:** [`MANIFESTO.md`](./MANIFESTO.md) ([PL](./MANIFESTO.pl.md)) · 👑 **The Realm:** [`REALM.md`](./REALM.md) · 🏛️ **Governance:** [`GOVERNANCE.md`](./GOVERNANCE.md)
 >
-> 🌍 Site/docs: **https://rak.ad/mcp** · 📦 npm: `@rak-ad/mcp` · 🔌 Remote: `https://rak.ad/api/mcp/rak/mcp`
+> 🌍 Site/docs: **https://rak.guru/mcp** · 📦 npm: `@rak-ad/mcp` · 🔌 Remote: `https://rak.guru/api/mcp/rak/mcp`
 >
 > 📜 **RAK language spec (v0.2):** [`SPEC.md`](./SPEC.md) — the open standard "write once → own it → cited by every agent". One envelope for **content and market** ([FOP profile](./docs/profiles/fop.md)).
 >
 > 💸 **Economics (the moat):** [`ECONOMICS.md`](./ECONOMICS.md) — pay-per-AI-citation. Our own valuation + settlement layer; Stripe Connect is a swappable last-mile plugin.
 
-`@rak-ad/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to a **RAK node**. The reference node today is **Poland** (rak.ad / Kanał ZERO) — the live test — plus universal editorial tools (research + write). The same `rak_<module>_<operation>` tools work for any node you run.
+`@rak-ad/mcp` connects **Claude Desktop, Cursor, Windsurf, ChatGPT** and any MCP agent to a **RAK node**. The reference node today is **Poland** (rak.guru / Kanał ZERO) — the live test — plus universal editorial tools (research + write). The same `rak_<module>_<operation>` tools work for any node you run.
 
 ---
 
@@ -37,7 +37,7 @@ RAK OS is how any country gives its local media back to its people: an open form
       "args": ["-y", "@rak-ad/mcp"],
       "env": {
         "RAK_API_KEY": "rk_...",        // omit for anonymous (reader) access
-        "RAK_BASE_URL": "https://rak.ad"
+        "RAK_BASE_URL": "https://rak.guru"
       }
     }
   }
@@ -46,7 +46,7 @@ RAK OS is how any country gives its local media back to its people: an open form
 
 ### Remote (server agents) — Streamable HTTP
 ```
-POST https://rak.ad/api/mcp/rak/mcp
+POST https://rak.guru/api/mcp/rak/mcp
 Authorization: Bearer <RAK_API_KEY>     # omit for the anon tier
 Api-Version: 2026-05
 ```
@@ -108,12 +108,12 @@ Per-skill details: [`skills/`](./skills).
 **Commercial use?** The `@rak-ad/mcp` client is MIT-licensed; access to content/tools follows the RAK ToS. Dedicated keys for partners/enterprise.
 
 ## API keys
-Reader tools need no key. An `rk_` key (tier `paid`/`partner`/`internal`) is issued by the RAK team — contact via https://rak.ad. Scopes: `content:read`, `skills:action`. Keys are tenant-scoped.
+Reader tools need no key. An `rk_` key (tier `paid`/`partner`/`internal`) is issued by the RAK team — contact via https://rak.guru. Scopes: `content:read`, `skills:action`. Keys are tenant-scoped.
 
 ## Links
-- Site / docs: **https://rak.ad/mcp**
-- LLM context: https://rak.ad/llms.txt
-- Portal: https://rak.ad
+- Site / docs: **https://rak.guru/mcp**
+- LLM context: https://rak.guru/llms.txt
+- Portal: https://rak.guru
 
 ## Who's behind this
 

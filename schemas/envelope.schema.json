@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://rak.ad/schemas/envelope.schema.json",
+  "$id": "https://rak.guru/schemas/envelope.schema.json",
   "title": "RAK OS Agentic Content Envelope (shared base)",
   "description": "The base envelope shared by the RAK content profile and the POXI/FOP market profile (SPEC.md §3.1). Profiles add fields and a per-kind `ext`; consumers MUST ignore unknown `kind` values and unknown keys. Kind-specific identity/ext rules live in kinds.json + kinds/*.ext.schema.json and are enforced by scripts/check-envelope.mjs.",
   "type": "object",

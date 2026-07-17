@@ -67,4 +67,4 @@ RAK does not compete with payment standards — it **accrues value in its own le
 
 ---
 
-*RAK Economics v0.1 — write once, own it, get paid every time an agent cites it. Reference node: rak.ad.*
+*RAK Economics v0.1 — write once, own it, get paid every time an agent cites it. Reference node: rak.guru.*

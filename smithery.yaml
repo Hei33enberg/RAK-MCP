@@ -10,7 +10,7 @@ startCommand:
         description: Bearer key. Omit for anonymous access (metadata + web search 5/day/IP).
       RAK_BASE_URL:
         type: string
-        default: https://rak.ad
+        default: https://rak.guru
       RAK_TENANT_ID:
         type: string
         default: rak
@@ -21,7 +21,7 @@ startCommand:
       args: ['-y', '@rak-ad/mcp'],
       env: {
         RAK_API_KEY: config.RAK_API_KEY || '',
-        RAK_BASE_URL: config.RAK_BASE_URL || 'https://rak.ad',
+        RAK_BASE_URL: config.RAK_BASE_URL || 'https://rak.guru',
         RAK_TENANT_ID: config.RAK_TENANT_ID || 'rak'
       }
     })

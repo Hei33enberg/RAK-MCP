@@ -18,7 +18,7 @@ The same model carried Linux (Linus Torvalds), Python for two decades (Guido van
 
 ## Funding
 
-RAK OS funds itself from its own commercial reference node (rak.ad) and node-network economics ([`ECONOMICS.md`](./ECONOMICS.md)). It does **not** take venture capital, private equity, or public-market money that would come with control of the roadmap. This is a governance rule, not a preference.
+RAK OS funds itself from its own commercial reference node (rak.guru) and node-network economics ([`ECONOMICS.md`](./ECONOMICS.md)). It does **not** take venture capital, private equity, or public-market money that would come with control of the roadmap. This is a governance rule, not a preference.
 
 ## Forks and national nodes
 

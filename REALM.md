@@ -39,7 +39,7 @@ L5 is the load-bearing tier of the whole project: **"fork your country's RAK"** 
 Split into what we can honestly offer **now** and what is explicitly gated.
 
 **Promisable today** (non-financial):
-- Recognition: a row in the open ledger, a level badge, your node/agent listed at rak.ad and in `rak_meta_list_agents`.
+- Recognition: a row in the open ledger, a level badge, your node/agent listed at rak.guru and in `rak_meta_list_agents`.
 - Repository rights: triage → merge, growing with level.
 - Early access to specs and RFCs, and a direct line to the Crown for L4+.
 
@@ -65,7 +65,7 @@ Owner checklist (tracked as owner actions, not done automatically):
 
 - [ ] GitHub org with **2+ owners** (no single-login single point of failure).
 - [ ] A **second npm owner** on the `@rak-ad` scope.
-- [ ] **Registrar redundancy** for `rak.ad` and the national-node domain pool.
+- [ ] **Registrar redundancy** for `rak.guru` and the national-node domain pool.
 - [ ] **Multi-sig** on any treasury.
 - [ ] Evaluate a legal entity (foundation / Verein) to **hold the trademark and domains**, matching the sovereign-but-not-personally-captured posture.
 - [ ] A **written succession plan**, held privately by the Crown.

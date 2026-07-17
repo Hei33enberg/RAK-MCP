@@ -1,6 +1,6 @@
 name: manifest-drift
 
-# SSOT drift-gate (Fala 3): the runtime at rak.ad is the source of truth for the tool
+# SSOT drift-gate (Fala 3): the runtime at rak.guru is the source of truth for the tool
 # surface. Fails if the committed schemas/tools.manifest.json no longer matches the live
 # `rak_meta_list_skills` catalog — catches a stale-deploy regression or an undocumented
 # tool automatically. Self-reports via a `manifest-drift` issue (external service → not a PR gate).
@@ -31,8 +31,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          title="MCP manifest drift (public surface ≠ live rak.ad)"
-          body="The committed \`schemas/tools.manifest.json\` no longer matches the live \`rak_meta_list_skills\` at rak.ad. Either the runtime changed its tool surface (commit the new manifest: \`node scripts/sync-manifest.mjs\`) or prod regressed to a stale deploy (redeploy from clean \`origin/feat/raidakcja-f1-v3\`). Run: $RUN_URL"
+          title="MCP manifest drift (public surface ≠ live rak.guru)"
+          body="The committed \`schemas/tools.manifest.json\` no longer matches the live \`rak_meta_list_skills\` at rak.guru. Either the runtime changed its tool surface (commit the new manifest: \`node scripts/sync-manifest.mjs\`) or prod regressed to a stale deploy (redeploy from clean \`origin/feat/raidakcja-f1-v3\`). Run: $RUN_URL"
           existing=$(gh issue list --state open --label manifest-drift --json number -q '.[0].number')
           if [ -n "$existing" ]; then
             gh issue comment "$existing" --body "$body"

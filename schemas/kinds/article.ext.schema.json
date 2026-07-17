@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://rak.ad/schemas/kinds/article.ext.schema.json",
+  "$id": "https://rak.guru/schemas/kinds/article.ext.schema.json",
   "title": "RAK `article` ext (content profile)",
   "description": "Optional per-kind bag for a RAK article. All fields optional; consumers ignore unknown keys.",
   "type": "object",

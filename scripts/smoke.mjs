@@ -5,11 +5,11 @@
  * Dependency-free: raw JSON-RPC over streamable-HTTP, parses the SSE `data:` line.
  *
  *   node scripts/smoke.mjs
- *   RAK_BASE_URL=https://staging.rak.ad node scripts/smoke.mjs
+ *   RAK_BASE_URL=https://staging.rak.guru node scripts/smoke.mjs
  *
  * Exit 1 on any hard failure (used by the smoke workflow to open a self-report issue).
  */
-const BASE = (process.env.RAK_BASE_URL || "https://rak.ad").replace(/\/+$/, "")
+const BASE = (process.env.RAK_BASE_URL || "https://rak.guru").replace(/\/+$/, "")
 const URL = `${BASE}/api/mcp/rak/mcp`
 const TENANT = process.env.RAK_TENANT_ID || "rak"
 

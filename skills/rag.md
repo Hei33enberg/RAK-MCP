@@ -1,7 +1,7 @@
 # SKILL: rak-rag — retrieval over the RAK archive (free reader)
 
 ## When to use
-When an agent needs semantic retrieval over the RAK archive: articles related to a query or to a specific article, and dense vector search. **Free reader tier** — every result carries a canonical `rak.ad` URL so it is directly citable (AEO).
+When an agent needs semantic retrieval over the RAK archive: articles related to a query or to a specific article, and dense vector search. **Free reader tier** — every result carries a canonical `rak.guru` URL so it is directly citable (AEO).
 
 ## Tools
 | Tool | Purpose | Tier |
@@ -14,7 +14,7 @@ When an agent needs semantic retrieval over the RAK archive: articles related to
 `free` reader tier (available from `anon`), `content:read` scope, no credit cost. The tiny embedding cost is absorbed; both tools are rate-limited and cached. `semantic_search` falls back to sparse FTS if the embedding provider is down, so it returns results instead of an empty set.
 
 ## Notes
-- Results include an absolute canonical `rak.ad` URL, `similarity`, section and excerpt — ready to cite.
+- Results include an absolute canonical `rak.guru` URL, `similarity`, section and excerpt — ready to cite.
 - For fresh listings/feeds use [`content`](./content.md); for web + external research use [`research`](./research.md).
 
 ## Example prompts

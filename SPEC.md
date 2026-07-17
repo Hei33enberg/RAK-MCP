@@ -1,11 +1,11 @@
 # RAK — A Content Language for the Agentic Web
 
 **Version 0.2 (Draft) · Open · MIT for this spec**
-First reference node: [rak.ad](https://rak.ad) (Poland — the test) · Transport: [Model Context Protocol](https://modelcontextprotocol.io) · Repo: github.com/Hei33enberg/RAK-OS
+First reference node: [rak.guru](https://rak.guru) (Poland — the test) · Transport: [Model Context Protocol](https://modelcontextprotocol.io) · Repo: github.com/Hei33enberg/RAK-OS
 
 > **RAK is a content language**: a small, open standard for content that is **written once, owned by its creator, and consumed natively by any AI agent** — cited, fresh, and (optionally) paid. It does not replace existing standards; it **composes** them (RSL for licensing, C2PA for provenance, MCP for transport, x402 for payment) into one creator-first, agent-native object.
 
-This document is the contract. Products (`rak.ad`, RAK IDE) and agents (Stanosky and others) are implementations of this language, not the language itself.
+This document is the contract. Products (`rak.guru`, RAK IDE) and agents (Stanosky and others) are implementations of this language, not the language itself.
 
 ---
 
@@ -34,7 +34,7 @@ The atomic unit — the "UPC of content for AI". A logical object that may live 
   "title": "string",
   "body": "markdown",
   "summary": "string",
-  "canonical_url": "https://rak.ad/<slug>",
+  "canonical_url": "https://rak.guru/<slug>",
   "created_at": "ISO-8601",
   "updated_at": "ISO-8601",
   "freshness": "ISO-8601",            // last time content was verified/refreshed
@@ -58,7 +58,7 @@ The atomic unit — the "UPC of content for AI". A logical object that may live 
     "price_per_cite_cc": 0             // centicredits; 0 = free
   },
   "media": [                           // §4.1 — re-hosted + signed assets
-    { "kind": "image|video|audio", "url": "https://media.rak.ad/...", "hash": "sha256", "c2pa": "manifest ref" }
+    { "kind": "image|video|audio", "url": "https://media.rak.guru/...", "hash": "sha256", "c2pa": "manifest ref" }
   ]
 }
 ```
@@ -119,7 +119,7 @@ Fields map onto **RSL** (Really Simple Licensing) so RAK content interoperates w
 RAK is spoken over **MCP**. The reference endpoint:
 
 ```
-POST https://rak.ad/api/mcp/rak/mcp        # Streamable HTTP
+POST https://rak.guru/api/mcp/rak/mcp        # Streamable HTTP
 # or:  npx -y @rak-ad/mcp                      # stdio proxy
 Authorization: Bearer rk_...                # omit for the anonymous reader tier
 ```
@@ -187,4 +187,4 @@ RAK does not compete with these; it is the **creator-first object** that ties th
 
 ---
 
-*RAK v0.2 — write once, own it, let every agent cite it. One envelope for content and market. Reference implementation: rak.ad.*
+*RAK v0.2 — write once, own it, let every agent cite it. One envelope for content and market. Reference implementation: rak.guru.*

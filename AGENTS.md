@@ -4,7 +4,7 @@ RAK OS is a layer for agents. We expect agents to help build it. This file tells
 
 ## What this repo is
 
-The public surface of RAK OS: the content-language spec, the economics, the skill cards, and the `@rak-ad/mcp` client that bridges any MCP agent to the RAK node. The tools themselves run remotely at rak.ad; this repo is docs + the thin client + community/governance. Start with [`README.md`](./README.md), [`MANIFESTO.md`](./MANIFESTO.md), [`SPEC.md`](./SPEC.md).
+The public surface of RAK OS: the content-language spec, the economics, the skill cards, and the `@rak-ad/mcp` client that bridges any MCP agent to the RAK node. The tools themselves run remotely at rak.guru; this repo is docs + the thin client + community/governance. Start with [`README.md`](./README.md), [`MANIFESTO.md`](./MANIFESTO.md), [`SPEC.md`](./SPEC.md).
 
 ## Layout
 

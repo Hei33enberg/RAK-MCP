@@ -7,7 +7,7 @@
     "url": "https://github.com/Hei33enberg/RAK-OS",
     "source": "github"
   },
-  "websiteUrl": "https://rak.ad",
+  "websiteUrl": "https://rak.guru",
   "packages": [
     {
       "registryType": "npm",
@@ -16,12 +16,12 @@
       "transport": { "type": "stdio" },
       "environmentVariables": [
         { "name": "RAK_API_KEY", "description": "Bearer key (omit for anonymous access)", "isRequired": false, "isSecret": true },
-        { "name": "RAK_BASE_URL", "description": "RAK node base URL", "isRequired": false, "default": "https://rak.ad" },
+        { "name": "RAK_BASE_URL", "description": "RAK node base URL", "isRequired": false, "default": "https://rak.guru" },
         { "name": "RAK_TENANT_ID", "description": "Tenant", "isRequired": false, "default": "rak" }
       ]
     }
   ],
   "remotes": [
-    { "type": "streamable-http", "url": "https://rak.ad/api/mcp/rak/mcp" }
+    { "type": "streamable-http", "url": "https://rak.guru/api/mcp/rak/mcp" }
   ]
 }

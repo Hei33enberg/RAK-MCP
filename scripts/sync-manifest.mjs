@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * SSOT drift-gate (Fala 3): the runtime tool registry at rak.ad is the source of truth.
+ * SSOT drift-gate (Fala 3): the runtime tool registry at rak.guru is the source of truth.
  * This fetches the live tool catalog (`rak_meta_list_skills`) and writes a committed
  * `schemas/tools.manifest.json` snapshot. `--check` compares the committed snapshot to
  * live and exits 1 on drift — so the public surface can never silently fall out of sync
@@ -13,7 +13,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs"
 import { fileURLToPath } from "node:url"
 import { dirname, join } from "node:path"
 
-const BASE = (process.env.RAK_BASE_URL || "https://rak.ad").replace(/\/+$/, "")
+const BASE = (process.env.RAK_BASE_URL || "https://rak.guru").replace(/\/+$/, "")
 const URL = `${BASE}/api/mcp/rak/mcp`
 const TENANT = process.env.RAK_TENANT_ID || "rak"
 const MANIFEST = join(dirname(fileURLToPath(import.meta.url)), "..", "schemas", "tools.manifest.json")
@@ -48,7 +48,7 @@ async function liveManifest() {
   const tools = (cat.tools || [])
     .map((t) => ({ name: t.name, tiers: t.tiers, scope: t.scope, billing: t.billing }))
     .sort((a, b) => a.name.localeCompare(b.name))
-  return { source: "rak.ad live rak_meta_list_skills", toolCount: tools.length, tools }
+  return { source: "rak.guru live rak_meta_list_skills", toolCount: tools.length, tools }
 }
 
 const live = await liveManifest()
