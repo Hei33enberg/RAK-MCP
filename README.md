@@ -66,7 +66,7 @@ npx @modelcontextprotocol/inspector
 | `partner` | yes | read-only (content + optionally RAG) |
 | `internal` | yes | full (publishing + distribution) |
 
-## Tool catalog (`rak_<module>_<op>`) — 54 tools
+## Tool catalog (`rak_<module>_<op>`) — 44 tools
 
 Authoritative surface: `rak_meta_list_skills` / [`schemas/tools.manifest.json`](./schemas/tools.manifest.json).
 
@@ -77,8 +77,6 @@ Authoritative surface: `rak_meta_list_skills` / [`schemas/tools.manifest.json`](
 | `voice` | `search` — persona-knowledge RAG (a public figure's own words, source-backed) | anon (reader) |
 | `legal` | `search` — Polish-law corpus (ELI/ISAP), citable statute fragments | anon (reader) |
 | `meta` | `list_sources`, `list_skills`, `health`, `list_agents` | anon / discovery |
-| `irc` | `list_channels`, `read_channel`, `presence`, `post`, `create_channel` | anon read / free post |
-| `murl` | `list_channels`, `read`, `presence`, `open`, `post` — rooms anchored to any URL/domain | anon read / free post |
 | `research` | `web`, `extract`, `fact_pack`, `summarize`, `deep` | anon → paid |
 | `write` | `draft`, `edit`, `plan`, `pipeline`, `publish`, `export`, `debate`, `document` | paid → internal |
 | `media` | `generate_image`, `generate_video`, `generate_song`, `storyboard`, `tts` | paid |
@@ -97,7 +95,7 @@ Per-skill details: [`skills/`](./skills).
 
 ## FAQ
 
-**Is RAK OS free?** Yes — reader tools (content, search, wire, region feeds, source census, RAG, persona/law search, and reading chat) are free and anonymous. Only the creative RAK tools for subscribers are paid.
+**Is RAK OS free?** Yes — reader tools (content, search, wire, region feeds, source census, RAG, persona/law search) are free and anonymous. Only the creative RAK tools for subscribers are paid.
 
 **How fresh is the data?** The pipeline harvests and processes sources 24/7, in 10–15 minute cycles. The `rak://health` resource shows freshness and 24h volume.
 
@@ -139,7 +137,7 @@ RAK (and POXI) run on **[Open Mercato](https://github.com/open-mercato/open-merc
 
 - **Discussions:** GitHub Discussions (once enabled) — questions, RFCs, show-and-tell.
 - **Contribute:** [`CONTRIBUTING.md`](./CONTRIBUTING.md) — humans and AI agents both ([`AGENTS.md`](./AGENTS.md)).
-- **Chat:** the RAK app ships a built-in community chat (an in-app client feature, mIRC-style). The `rak_irc_*` / `rak_murl_*` MCP tools are the **agent bridge** into those same channels (anon read, free post) — not a separate chat product. [RFC 0001](./docs/rfcs/0001-irc-skill.md) tracks the fuller native-chat vision.
+- **Chat:** the RAK app ships a built-in community chat as an in-app client feature — part of the app, not the public MCP toolset.
 
 ## Companion project — Strajk Polski
 RAK = fresh local news & knowledge about Poland. **Strajk Polski** = hard, verified fiscal & political open data (national debt, the budget, all 460 MPs, Sejm votes, the map of government) + RAG. Together: **all of Poland for AI agents, in one place.**

@@ -1,6 +1,6 @@
 {
   "source": "rak.guru live rak_meta_list_skills",
-  "toolCount": 54,
+  "toolCount": 44,
   "tools": [
     {
       "name": "rak_content_create_poll",
@@ -104,64 +104,6 @@
       "billing": "none"
     },
     {
-      "name": "rak_irc_create_channel",
-      "tiers": [
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_irc_list_channels",
-      "tiers": [
-        "anon",
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_irc_post",
-      "tiers": [
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_irc_presence",
-      "tiers": [
-        "anon",
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_irc_read_channel",
-      "tiers": [
-        "anon",
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
       "name": "rak_legal_search",
       "tiers": [
         "anon",
@@ -256,64 +198,6 @@
     },
     {
       "name": "rak_meta_list_sources",
-      "tiers": [
-        "anon",
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_murl_list_channels",
-      "tiers": [
-        "anon",
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_murl_open",
-      "tiers": [
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_murl_post",
-      "tiers": [
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_murl_presence",
-      "tiers": [
-        "anon",
-        "free",
-        "paid",
-        "partner",
-        "internal"
-      ],
-      "scope": "content:read",
-      "billing": "none"
-    },
-    {
-      "name": "rak_murl_read",
       "tiers": [
         "anon",
         "free",
